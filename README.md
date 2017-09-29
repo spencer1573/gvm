@@ -87,6 +87,15 @@ xcode-select --install
 brew update
 brew install mercurial
 ```
+### A Note on Compiling Go on Sierra
+Similar as mentioned above about 1.4, you need to instead install 1.7.1 from binary source first in order to use gvm to compile other versions of go for sierra. For a list of the initial versions needed based on your version of os x take a look here: https://github.com/golang/go/wiki/Darwin
+
+```
+gvm install go1.7.1 -B
+gvm use go1.7.1
+export GOROOT_BOOTSTRAP=$GOROOT
+gvm install go1.9
+```
 
 Linux Requirements
 ==================
